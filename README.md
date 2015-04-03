@@ -1,0 +1,2 @@
+# DogStay
+Website that can be used to benefit dogs and their owners by providing  safe environments for dogs to stay while the owners are occupied. Yard Dog lets users sign up as a host or dog owner so that owners who go out of town can find someone reliable and affordable to look after their dog. The service promises no cages and loving attention for your pet at a lower price point than you’d see at a traditional kennel service.
