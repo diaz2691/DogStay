@@ -1,22 +1,7 @@
 <?php
-class HelloWorld
-{
-    private $greeting;
-
-    public function __construct()
-    {
-        $this->greeting = "Hello World";
+class User {
+    
+    public function talk() {
+        return "Hello world!";
     }
-
-    public function getGreeting()
-    {
-        return $this->greeting;
-    }
-
-
 }
-
-$helloObj = new HelloWorld();
-
-echo $helloObj->getGreeting();
-?>
