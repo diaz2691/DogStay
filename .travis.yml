@@ -17,6 +17,7 @@ php:
 before_script:
   - composer install --prefer-source --no-interaction --dev
 
+sudo: required
 # # Commands you want to run that will verify your build.
 # script: phpunit
 
