@@ -3,19 +3,18 @@ language: php
 
 # Versions of PHP you want your project run with.
 php:
-  - 5.2
   - 5.3
   - 5.4
-  - 5.5
-  - 5.6
-  - hhvm
- before_install:
-  - php /home/travis/.phpenv/versions/5.4.25/bin/composer.phar self-update
+ 
+ script: phpunit
+ #before_install:
+ # - php /home/travis/.phpenv/versions/5.4.25/bin/composer.phar self-update
   
 # /*
 # # Commands to be run before your environment runs.
 before_script:
-  - composer install --prefer-source --no-interaction --dev
+  - composer install 
+  #--prefer-source --no-interaction --dev
 
 sudo: required
 # # Commands you want to run that will verify your build.
