@@ -27,5 +27,5 @@ before_script:
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
-  email: "sudocoder@ymail.com"
+  email: ""
    
