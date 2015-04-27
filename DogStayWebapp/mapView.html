@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+var map;
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(47.608940, -122.340141),
+    zoom:7,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+    
+function getM(){
+    //Carry out an Ajax request.
+    $.ajax({
+        url: 'get-locations.php',
+        dataType: "json",
+        success:function(data){
+            //Loop through each location.
+
+            $.each(data, function(){
+
+                //Plot the location as a marker
+                var pos = new google.maps.LatLng(this.lat, this.lng); 
+                new google.maps.Marker({
+                position: pos,
+                map: map
+                });
+           });
+       }
+    });
+}
+</script>
+    
+</head>
+
+<body>
+    <input type="text" name="n" id="n" /> <br />
+<div id="googleMap" style="width:500px;height:380px;"></div>
+ <script>$("#n").change(getM);</script>   
+    
+    <!--
+<script type="text/javascript"> 
+    
+    //When the Window finishes loading...
+    $(window).load(function () {
+   
+        //Carry out an Ajax request.
+        $.ajax({
+            url: 'get-locations.php',
+            success:function(data){
+                //Loop through each location.
+                $.each(data, function(){
+                    console.log("d");
+                    //Plot the location as a marker
+                    var pos = new google.maps.LatLng(this.lat, this.lng); 
+                    new google.maps.Marker({
+                        position: pos,
+                        map: map
+                    });
+                });
+            }
+        });
+ 
+    });
+ 
+</script>  
+-->
+</body>
+
+</html>
