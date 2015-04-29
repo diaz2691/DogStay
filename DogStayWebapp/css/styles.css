@@ -74,7 +74,7 @@ img{
     font-weight: 300;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     padding: 1px;
-    height: 35px;
+    height: 27px;
     background-color: aliceblue;
 }
 #searchLocation:focus {
@@ -84,7 +84,6 @@ img{
     width: 100%;
 }
 #googleMap {
-    height: 400px;
+    height: 500px;
 }
 #googleMap img { max-width: none; }
-
