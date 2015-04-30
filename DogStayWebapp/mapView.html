@@ -2,14 +2,41 @@
 <html>
 <title>Dog Stay</title>
 <head>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&sensor=false"></script>
+    
+</head>
+
+<body>
+    <div id="logo">
+        <img src="img/DogStaylogo.png">
+    </div>
+
+    <button id="signupB" value="SignUp" >Sign Up</button>
+    <button id="loginB" value="login" >Login</button>
+    
+    <div id="dates">
+        <label for="checkIn">Check In</label>
+        <input type="date" name="checkIn" id="checkIn" class="dateBox"/>
+        <label for="checkIn">Check Out</label>
+        <input type="date" name="checkOut" id="checkOut" class="dateBox"/>
+    </div>
+    <div id="search">
+        <input id="searchLocation" name="searchLocation" class="controls" type="text" placeholder="Address">
+        <button id="searchB" value="Search" class="controls">
+            Search!
+        </button>
+    </div>
+
+
+<div id="googleMap"></div>
+
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&sensor=false"></script>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <link href="css/styles.css" rel="stylesheet">
     <script>
         var map;
         function initialize() {
             var mapProp = {
-                zoom : 10,
+                zoom : 12,
                 mapTypeId : google.maps.MapTypeId.ROADMAP
             };
             map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
@@ -33,8 +60,11 @@
             map.controls[google.maps.ControlPosition.LEFT_TOP].push(searchDiv);
             var datesDiv = (document.getElementById('dates'));
             map.controls[google.maps.ControlPosition.TOP_LEFT].push(datesDiv);
+            
             var loginButton = (document.getElementById('loginB'));
             map.controls[google.maps.ControlPosition.TOP_RIGHT].push(loginButton);
+            var signupButton = (document.getElementById('signupB'));
+            map.controls[google.maps.ControlPosition.TOP_RIGHT].push(signupButton);
 
         }
 
@@ -72,55 +102,33 @@
 
     </script>
 
-</head>
-
-<body>
-    <div id="logo">
-        <img src="img/DogStaylogo.png">
-    </div>
-
-    <button id="loginB" value="login" >
-        Login
-    </button>
-    <div id="dates">
-        <label for="checkIn">Check In</label>
-        <input type="date" name="checkIn" id="checkIn" class="dateBox"/>
-        <label for="checkIn">Check Out</label>
-        <input type="date" name="checkOut" id="checkOut" class="dateBox"/>
-    </div>
-    <div id="search">
-        <input id="searchLocation" name="searchLocation" class="controls" type="text" placeholder="Address">
-        <button id="searchB" value="Search" class="controls">
-            Search!
-        </button>
-    </div>
-
-
-<div id="googleMap"></div>
-<script>
-    $("#searchB").click(function() {
-        var geocoder = new google.maps.Geocoder();
-        var address = $("#searchLocation").val();
-
-        geocoder.geocode( { 'address': address}, function(results, status) {
-
-            if (status == google.maps.GeocoderStatus.OK) {
-                var latitude = results[0].geometry.location.lat();
-                var longitude = results[0].geometry.location.lng();
-                var pos = new google.maps.LatLng(latitude,
-                        longitude);
-                map.setCenter(pos);
-            }
-        });
-
-        getM();///plot all markers
-
-    });
-    $("#loginB").click(function(){
-    	location.href = "login.php";
-    });
-
-</script>
+	<script>
+	    $("#searchB").click(function() {
+	        var geocoder = new google.maps.Geocoder();
+	        var address = $("#searchLocation").val();
+	
+	        geocoder.geocode( { 'address': address}, function(results, status) {
+	
+	            if (status == google.maps.GeocoderStatus.OK) {
+	                var latitude = results[0].geometry.location.lat();
+	                var longitude = results[0].geometry.location.lng();
+	                var pos = new google.maps.LatLng(latitude,
+	                        longitude);
+	                map.setCenter(pos);
+	            }
+	        });
+	
+	        getM();///plot all markers
+	
+	    });
+	    $("#loginB").click(function(){
+	    	location.href = "login.php";
+	    });
+	    $("#signupB").click(function(){
+	    	location.href = "signup.php";
+	    });
+	
+	</script>
 </body>
 
 </html>

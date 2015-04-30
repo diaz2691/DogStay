@@ -21,7 +21,7 @@ img{
 #logo{
     text-align: center;
 }
-#loginB{
+#loginB, #signupB{
     background-color: #80CAFF;
     margin-top: 10px;
     border: 1px solid transparent;
