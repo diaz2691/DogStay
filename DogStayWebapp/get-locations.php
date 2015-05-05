@@ -1,24 +1,12 @@
 <?php
+require 'dbConnection.php';
 
-function getConnection(){
-        $host   = "127.0.0.1";
-        $dbName = "dogstay";
-        $userName = "root";
-        $password = "Thisisdogstay1";
-        $dbConn = new PDO("mysql:host=$host;dbname=$dbName", $userName, $password);
-    return $dbConn;
-}
+$pdo = getConnection();
 
-//Using PDO in this example.
-//require 'pdo-connection.php';
-$pdo = getConnection(); 
+$sth = $pdo -> prepare("SELECT address, city, state, zipcode FROM locations");
+$sth -> execute();
+$locations = $sth -> fetchAll(PDO::FETCH_ASSOC);
 
-//Get our locations from the database.
-$sth = $pdo->prepare("SELECT `lat`, `lng` FROM `markers`");
-$sth->execute();
-$locations = $sth->fetchAll(PDO::FETCH_ASSOC);
- 
-//Encode the $locations array in JSON format and print it out.
 header('Content-Type: application/json');
 echo json_encode($locations);
 ?>
