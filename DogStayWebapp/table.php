@@ -136,12 +136,9 @@ $reservationsOfOwner = getReservationsOwner($dbConn);
 			                                            <td>" . $v['weight']. "</td>
 			                                            <td>" . $v['gender']. "</td>
 			                                        	<td><form action='editDogInfo.php' method='post'>
-											            	<input type='hidden' name='dogId' value='" . $v['dogId'] . "> 
+											            	<input type='hidden' name='dogId' value='" . $v['dogId'] . "'> 
 											            	<input type='submit' value='edit' name='editDogInfo'>
 											            </form></td>
-											            <td>
-											            hello
-											            </td>
 											            </tr>";
 												}
 											}
@@ -193,12 +190,9 @@ $reservationsOfOwner = getReservationsOwner($dbConn);
 		                                            <td>" . $v['price']. "</td>
 		                                            <td>" . $v['dateIn'] . " - " . $v['dateOut'] . "</td>
 		                                            <td><form action='editLocationInfo.php' method='post'>
-											            	<input type='hidden' name='locationId' value='" . $v['locationId'] . "> 
+											            	<input type='hidden' name='locationId' value='" . $v['locationId'] . "'> 
 											            	<input type='submit' value='edit' name='editLocationInfo'>
 											            </form></td>
-											            <td>
-											            hello
-											            </td>
 											            </tr>";
 											}
 											}

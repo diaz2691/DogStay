@@ -37,7 +37,7 @@ if (!isset($_SESSION['ownerId'])){
 <body >
 	<a class="navbar-brand" href="table.php"><i class="fa fa-chevron-left "></i> Back </a>
 	<br/><br/><br/>
-<div class="container">
+<div class="container"  id="formLength">
 <form method="post" class="form-signin">
 	Street Address: <input class="form-control" type="text" name="address"> <br />
     City: <input class="form-control" type="text" name="city"> <br />

@@ -35,7 +35,7 @@ if (!isset($_SESSION['ownerId'])){
 <body >
 	<a class="navbar-brand" href="table.php"><i class="fa fa-chevron-left "></i> Back </a>
 	<br/><br/><br/>
-<div class="container">
+<div class="container" id="formLength">
 <form method="post" class="form-signin">
 	Dog's Name: <input class="form-control" type="text" name="dogName"> <br />
     Breed: <input class="form-control" type="text" name="breed"> <br />
