@@ -17,7 +17,7 @@
             
         }else{
             $_SESSION["username"] = $result["username"];
-			$_SESSION["username"] = $result["username"];
+			//$_SESSION["username"] = $result["username"];
 		
             header("Location: profile.php");
 			
