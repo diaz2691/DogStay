@@ -2,7 +2,7 @@
 
 session_start();
 session_destroy();
- header("Location: mapView.html");
+header("Location: mapView.php");
 
 
 ?>

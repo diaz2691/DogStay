@@ -63,6 +63,7 @@ if (isset($_POST['updateForm'])) {  //the update form has been submitted
 	    
 	    <input class="btn btn-lg btn-primary btn-block" type="submit" name="updateForm" value="Update!">
 	</form>
+	
 </div>
 </body>
 </html>

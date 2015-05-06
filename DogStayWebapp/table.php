@@ -19,14 +19,14 @@ function getLocations($dbConn) {
 }
 
 function getReservationsClient($dbConn) {
-	$sql = "SELECT ownerId, clientId, dogId, price, dateIn, dateOut FROM reservations WHERE clientId = :ownerId";
+	$sql = "SELECT reservationId, ownerId, clientId, dogId, price, dateIn, dateOut FROM reservations WHERE clientId = :ownerId";
 	$stmt = $dbConn -> prepare($sql);
 	$stmt -> execute(array(":ownerId" => $_SESSION['ownerId']));
 	return $stmt -> fetchAll();
 }
 
 function getReservationsOwner($dbConn) {
-	$sql = "SELECT ownerId, clientId, dogId, price, dateIn, dateOut FROM reservations WHERE ownerId = :ownerId";
+	$sql = "SELECT reservationId, ownerId, clientId, dogId, price, dateIn, dateOut FROM reservations WHERE ownerId = :ownerId";
 	$stmt = $dbConn -> prepare($sql);
 	$stmt -> execute(array(":ownerId" => $_SESSION['ownerId']));
 	return $stmt -> fetchAll();
@@ -245,6 +245,10 @@ $reservationsOfOwner = getReservationsOwner($dbConn);
 		                                            <td>" . $v['price']. "</td>
 		                                            <td>" . $v['dateIn']. "</td>
 		                                        	<td>" . $v['dateOut']. "</td>
+		                                        	<td><form action='deleteReservation.php' method='post'>
+										            	<input type='hidden' name='reservationId' value='" . $v['reservationId'] . "'> 
+										            	<input type='submit' value='Delete' name='deleteReserv'>
+										            </form></td>
 		                                        </tr>";
 											}
 											}

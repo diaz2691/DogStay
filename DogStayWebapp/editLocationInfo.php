@@ -61,16 +61,18 @@ if (isset($_POST['updateForm'])) {  //the update form has been submitted
 	<a class="navbar-brand" href="table.php"><i class="fa fa-chevron-left "></i> Back </a>
 	<br/><br/><br/>
 <div class="container"  id="formLength">
-<form method="post" class="form-signin">
+	<center><h3 style="color: white"><i class="fa fa-map-marker "></i> Edit Your Location's info</h3></center>
+	<hr/>
+<form method="post" class="form-signin" style="font-size: 20px; color: white">
     
-    Street Address: <input class="form-control" type="text" name="address" value="<?=$result['address']?>"> <br />
-    City: <input class="form-control" type="text" name="city" value="<?=$result['city']?>"> <br />
-    State: <input class="form-control" type="text" name="state" value="<?=$result['state']?>"><br />
-    Zip Code: <input class="form-control" type="text" name="zipcode" value="<?=$result['zipcode']?>"><br />
-    Price: <input class="form-control" type="text" name="price" value="<?=$result['price']?>"><br />
-    Date In: <input class="form-control" type="date" name="dateIn" value="<?=$result['dateIn']?>"><br />
-    Date Out: <input class="form-control" type="date" name="dateOut" value="<?=$result['dateOut']?>"><br />
-    <input type='hidden' name='locationId' value="<?=$_POST['locationId']?>">
+    Street Address: <input class="form-control" type="text" name="address" value="<?=$result['address']?>">
+    City: <input class="form-control" type="text" name="city" value="<?=$result['city']?>"> 
+    State: <input class="form-control" type="text" name="state" value="<?=$result['state']?>">
+    Zip Code: <input class="form-control" type="text" name="zipcode" value="<?=$result['zipcode']?>">
+    Price: <input class="form-control" type="text" name="price" value="<?=$result['price']?>">
+    Date In: <input class="form-control" type="date" name="dateIn" value="<?=$result['dateIn']?>">
+    Date Out: <input class="form-control" type="date" name="dateOut" value="<?=$result['dateOut']?>">
+    <input type='hidden' name='locationId' value="<?=$_POST['locationId']?>"><br />
     <input class="btn btn-lg btn-primary btn-block" type="submit" name="updateForm" value="Update!">
     
 </form>

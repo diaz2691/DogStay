@@ -38,14 +38,15 @@ if (!isset($_SESSION['ownerId'])){
 	<a class="navbar-brand" href="table.php"><i class="fa fa-chevron-left "></i> Back </a>
 	<br/><br/><br/>
 <div class="container"  id="formLength">
+	<center><h3 style="color: white"><i class="fa fa-map-marker "></i> Add Your Location</h3></center>
 <form method="post" class="form-signin">
-	Street Address: <input class="form-control" type="text" name="address"> <br />
-    City: <input class="form-control" type="text" name="city"> <br />
-   	State: <input class="form-control" type="text" name="state"> <br />
-    Zip Code: <input class="form-control" type="text" name="zipcode"> <br />
-    Price: <input class="form-control" type="text" name="price"> <br />
-    Check in: <input class="form-control" type="date" name="dateIn"> <br />
-    Check out: <input class="form-control" type="date" name="dateOut"> <br />
+	<input class="form-control" type="text" name="address" placeholder="Street Address"> <br />
+    <input class="form-control" type="text" name="city" placeholder="City"> <br />
+   	<input class="form-control" type="text" name="state" placeholder="State"> <br />
+    <input class="form-control" type="text" name="zipcode" placeholder="Zip Code"> <br />
+    <input class="form-control" type="text" name="price" placeholder="Price"> <br />
+    <input class="form-control" type="date" name="dateIn" placeholder="Check in"> <br />
+    <input class="form-control" type="date" name="dateOut" placeholder="Check out"> <br />
     
     <input class="btn btn-lg btn-primary btn-block" type="submit" name="updateForm" value="Create!">
     

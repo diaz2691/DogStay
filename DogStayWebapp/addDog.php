@@ -36,11 +36,12 @@ if (!isset($_SESSION['ownerId'])){
 	<a class="navbar-brand" href="table.php"><i class="fa fa-chevron-left "></i> Back </a>
 	<br/><br/><br/>
 <div class="container" id="formLength">
+	<center><h3 style="color: white"><i class="fa fa-paw "></i> Add Your Dog</h3></center>
 <form method="post" class="form-signin">
-	Dog's Name: <input class="form-control" type="text" name="dogName"> <br />
-    Breed: <input class="form-control" type="text" name="breed"> <br />
-    Weight: <input class="form-control" type="text" name="weight"> <br />
-    Gender: <input class="form-control" type="text" name="gender"> <br />
+	<input class="form-control" type="text" name="dogName" placeholder="Dog's Name"> <br />
+    <input class="form-control" type="text" name="breed" placeholder="Breed"> <br />
+    <input class="form-control" type="text" name="weight" placeholder="Weight"> <br />
+    <input class="form-control" type="text" name="gender" placeholder="Gender"> <br />
     
     <input type="submit" class="btn btn-lg btn-primary btn-block" name="updateForm" value="Create!">
     
