@@ -1,4 +1,8 @@
-
+<?php
+function getAveragePrice(){
+	
+}
+?>
 <!DOCTYPE html>
 <html>
 <title>Dog Stay</title>

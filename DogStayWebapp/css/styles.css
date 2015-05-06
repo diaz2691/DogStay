@@ -12,6 +12,9 @@ body{
     font-family: Roboto;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
+#formLength{
+	max-width: 300px;
+}
 #search{
     padding-left: 10px;
 }

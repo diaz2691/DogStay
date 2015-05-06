@@ -1,6 +1,3 @@
-<?php
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -95,6 +92,16 @@
 	        <input type="tel" name="phone" id="phone" class="form-control" placeholder="phone" required><span id="phoneError"></span>
 	        <input type="text" name="username" id="username" class="form-control" placeholder="Username" required> <span id="usernameError"></span>
 	        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+	      	<?php
+	      	if($_POST['stay'] == 2){
+	      		echo "<input type='hidden' name='stay' value='2'> ";
+	      		echo "<input type='hidden' name='name' value='" . $_POST['name'] . "'>";
+				echo "<input type='hidden' name='ownerId' value='" . $_POST['ownerId'] . "'>";
+			 	echo "<input type='hidden' name='price' value='" . $_POST['price'] . "'>";
+				echo "<input type='hidden' name='dateIn' value='" . $_POST['dateIn'] . "'>";
+				echo "<input type='hidden' name='dateOut' value='" . $_POST['dateOut'] . "'>";
+	      	}
+	      	?>
 	      <button id="signupB" name="signupForm" class="btn btn-lg btn-primary btn-block" type="submit" disabled='disabled'>Sign Up</button>    
 	    </form>
 	    	    
