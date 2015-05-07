@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Login</title>
+    <link rel="icon" href="img/favicon-paw.ico" type="img/x-icon">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
 
   </head>
 
   <body>
+  	<a class="navbar-brand" href="logout.php"><i class="fa fa-chevron-left "></i> Back </a>
+	<br/><br/><br/>
     <div class="container">
       <div id="logo">
 	  	<img src="img/DogStaylogo.png">

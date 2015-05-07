@@ -27,6 +27,7 @@ if (!isset($_SESSION['ownerId'])){
 <html>
 <head>
     <title>Dogs</title>
+    <link rel="icon" href="img/favicon-paw.ico" type="img/x-icon">
     <meta charset  = "utf-8"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet"><link href="assets/css/font-awesome.css" rel="stylesheet" />
