@@ -52,6 +52,7 @@ if (isset($_POST['updateForm'])) {  //the update form has been submitted
 <html>
 <head>
     <title>Edit Dog</title>
+    <link rel="icon" href="img/favicon-paw.ico" type="img/x-icon">
     <meta charset  = "utf-8"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet"><link href="assets/css/font-awesome.css" rel="stylesheet" />

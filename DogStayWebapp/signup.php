@@ -3,8 +3,10 @@
 <html>
 <head>
     <title>Sign Up</title>
+    <link rel="icon" href="img/favicon-paw.ico" type="img/x-icon">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script>  
     	var avaButton = false, avaButton2 = false;
@@ -79,6 +81,8 @@
   	</script>
 </head>
 <body>
+	<a class="navbar-brand" href="logout.php"><i class="fa fa-chevron-left "></i> Back </a>
+	<br/><br/><br/>
 	<div class="container">
 		
 		<div id="logo">

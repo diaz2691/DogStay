@@ -77,6 +77,7 @@ if(isset($_POST['profile'])){
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" href="img/favicon-paw.ico" type="img/x-icon">
     <title>Reservation</title>
     <meta charset  = "utf-8"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">

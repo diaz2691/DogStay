@@ -84,6 +84,7 @@ else{
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+	<link rel="icon" href="img/favicon-paw.ico" type="img/x-icon">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
